@@ -68,7 +68,6 @@
     </div>
 
     <script>
-        // قاعدة بيانات الطلاب
         const students = {
             "49696": "ادم عمرو",
             "81659": "نور عبدالرحمن",
@@ -174,29 +173,29 @@
             "08724": "عبدالوهاب عبدالرحمن السيد"
         };
 
-        // تعبئة اسم الطالب بناءً على الكود
         function fillStudentName() {
             const code = document.getElementById('studentCode').value.trim();
             const studentNameInput = document.getElementById('studentName');
             studentNameInput.value = students[code] || ""; // إذا لم يتم العثور على الكود، يبقى الحقل فارغًا
         }
 
-        // إنشاء الرسالة
-        function generateMessage() {
-            const name = document.getElementById('studentName').value.trim();
-            const grade = document.getElementById('studentGrade').value.trim();
-            const date = new Date().toLocaleDateString('ar-EG');
-            const teacherName = "الباشمهندس/ طارق محمد";
-            const contact = "01011717876";
+function generateMessage() {
+    const name = document.getElementById('studentName').value.trim();
+    const grade = document.getElementById('studentGrade').value.trim();
+    const date = new Date().toLocaleDateString('ar-EG');
+    const teacherName = "الباشمهندس/ طارق محمد";
+    const contact = "01011717876";
 
-            if (name === "" || grade === "") {
-                alert("يرجى إدخال كود الطالب ودرجته.");
-                return;
-            }
+    if (name === "" || grade === "") {
+        alert("يرجى إدخال كود الطالب ودرجته.");
+        return;
+    }
 
-            const message = `درجة الطالب ${name} ${grade} من 60 في امتحان الفيزياء على الفصل الثاني بتاريخ ${date} مع ${teacherName}..... للتواصل (واتساب): ${contact}`;
-            const resultDiv = document.getElementById('result');
-            resultDiv.textContent = message;
-            resultDiv.style.display = "block";
+    const message = `درجة الطالب ${name} ${grade} من 60 في امتحان الفيزياء على الفصل الثاني بتاريخ ${date}.\n${teacherName}\n..... للتواصل (واتساب): ${contact}`;
+    const resultDiv = document.getElementById('result');
+    resultDiv.textContent = message;
+    resultDiv.style.display = "block";
+
+
         }
     </script>
