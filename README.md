@@ -182,7 +182,7 @@
 function generateMessage() {
     const name = document.getElementById('studentName').value.trim();
     const grade = document.getElementById('studentGrade').value.trim();
-    const date = new Date().toLocaleDateString('ar-EG');
+    const date = "6/12/2024"; // تاريخ ثابت
     const teacherName = "الباشمهندس/ طارق محمد";
     const contact = "01011717876";
 
