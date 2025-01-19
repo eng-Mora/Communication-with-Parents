@@ -182,7 +182,7 @@
 function generateMessage() {
     const name = document.getElementById('studentName').value.trim();
     const grade = document.getElementById('studentGrade').value.trim();
-    const date = "6/12/2024"; // تاريخ ثابت
+    const date = "17/1/2025"; // تاريخ ثابت
     const teacherName = "الباشمهندس/ طارق محمد";
     const contact = "01011717876";
 
@@ -191,7 +191,7 @@ function generateMessage() {
         return;
     }
 
-    const message = `درجة الطالب ${name} ${grade} من 60 في امتحان الفيزياء على الفصل الثاني بتاريخ ${date}.\n${teacherName}\n..... للتواصل (واتساب): ${contact}`;
+    const message = `درجة الطالب ${name} ${grade} من 60 في امتحان الفيزياء على الفصل الثالث بتاريخ ${date}.\n${teacherName}\n..... للتواصل (واتساب): ${contact}`;
     const resultDiv = document.getElementById('result');
     resultDiv.textContent = message;
     resultDiv.style.display = "block";
